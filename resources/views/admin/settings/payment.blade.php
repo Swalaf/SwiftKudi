@@ -81,9 +81,12 @@
                         </label>
                     </div>
                     <div class="flex items-center">
-                        <button formaction="{{ route('admin.settings.test-gateway', 'paystack') }}" formmethod="POST" class="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
-                            <i class="fas fa-vial mr-2"></i> Test Connection
-                        </button>
+                        <form action="{{ route('admin.settings.test-gateway', 'paystack') }}" method="POST" class="inline">
+                            @csrf
+                            <button type="submit" class="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                                <i class="fas fa-vial mr-2"></i> Test Connection
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
